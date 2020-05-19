@@ -1,0 +1,21 @@
+print("Welcome to the MVP Sentence Leveler. This MVP will inform you of whether an input word is the appropriate reading level for the intended audience. This program will be expanded upon to cover all grade levels. ")
+while True :
+    kindergarten_list = ['a', 'airplane', 'and', 'at', 'away', 'ball', 'big', 'blue', 'can', 'car', 'come', 'daddy', 'did', 'do', 'down', 'fast', 'father', 'for', 'fun', 'funny', 'get', 'go', 'good', 'green', 'have', 'he', 'help', 'here', 'home', 'house', 'I', 'in', 'is', 'it', 'jump', 'like', 'little', 'look', 'make', 'may', 'me', 'mother', 'my', 'not', 'now', 'on', 'play', 'red', 'ride', 'run', 'said', 'see', 'something', 'stop', 'the', 'this', 'to', 'toy', 'two', 'up', 'want', 'we', 'what', 'will', 'with', 'work', 'yes', 'you']
+    grade1_list = ['about', 'after', 'again', 'all', 'alone', 'along', 'am', 'an', 'animal', 'another', 'any', 'apple', 'are', 'around', 'as', 'ask', 'asked', 'aunt', 'baby', 'back', 'bag', 'balloon', 'barn', 'basket', 'be', 'bear', 'bed', 'bee', 'before', 'began', 'behind', 'being', 'best', 'better', 'bird', 'birthday', 'black', 'boat', 'book', 'box', 'boy', 'bring', 'brown', 'bus', 'but', 'buy', 'by', 'cake', 'calf', 'call', 'called', 'came', "can't", 'cat', 'catch', 'children', 'circus', 'clown', 'coat', 'cold', 'color', 'coming', 'cookie', 'could', 'cow', 'cry', 'dark', 'day', 'does', 'dog', 'doing', 'doll', "don't", 'door', 'dress', 'duck', 'each', 'eat', 'egg', 'every', 'far', 'farm', 'faster', 'feet', 'find', 'fine', 'fire', 'fireman', 'first', 'fish', 'fit', 'five', 'flew', 'flower', 'fly', 'found', 'four', 'friend', 'fog', 'from', 'game', 'garden', 'gave', 'girl', 'give', 'glad', 'goat', 'going', 'gone', 'goodbye', 'got', 'grass', 'ground', 'grow', 'guess', 'had', 'hand', 'happy', 'hard', 'has', 'hat', 'head', 'hear', 'heard', 'hello', 'hen', 'her', 'high', 'hill', 'him', 'his', 'hold', 'honey', 'horse', 'hot', 'how', 'hurry', 'ice', 'ice cream', 'if', 'into', 'just', 'kitten', 'know', 'lamb', 'last', 'laugh', 'let', "let's", 'letter', 'light', 'live', 'living', 'long', 'looked', 'lost', 'lunch', 'made', 'man', 'many', 'men', 'met', 'milk', 'miss', 'Miss', 'money', 'monkey', 'more', 'morning', 'Mr.', 'Mrs.', 'much', 'must', 'name', 'near', 'nest', 'never', 'new', 'next', 'night', 'no', 'noise', 'nose', 'nothing', 'of', 'off', 'oh', 'old', 'once', 'one', 'or', 'other', 'our', 'out', 'over', 'paint', 'painted', 'painter', 'parade', 'park', 'party', 'peanut', 'penny', 'people', 'pet', 'picnic', 'picture', 'pig', 'please', 'pocket', 'pony', 'pretty', 'prize', 'pull', 'puppy', 'put', 'rabbit', 'rain', 'ran', 'read', 'ready', 'right', 'road', 'room', 'running', 'sang', 'sat', 'saw', 'school', 'she', 'shoe', 'shoes', 'show', 'sing', 'sit', 'sitting', 'sleep', 'snow', 'so', 'some', 'sometimes', 'soon', 'spring', 'squirrel', 'stay', 'step', 'stopped', 'store', 'story', 'street', 'sun', 'surprise', 'tail', 'take', 'talk', 'tell', 'than', 'thank', 'that', 'their', 'them', 'then', 'there', 'these', 'they', 'thing', 'think', 'those', 'three', 'time', 'told', 'too', 'took', 'town', 'train', 'tree', 'trick', 'truck', 'try', 'turtle', 'twin', 'uncle', 'under', 'us', 'very', 'wagon', 'walk', 'walked', 'was', 'water', 'way', 'went', 'were', 'wet', 'when', 'where', 'white', 'who', 'why', 'window', 'wish', 'without', 'woman', 'word', 'would', 'yard', 'year', 'yellow', 'your', 'zoo']
+    kindergarten_set = set(kindergarten_list)
+    grade1_set = set(grade1_list + kindergarten_list)
+    leveler = input("Please choose a grade: K or G1 >> ")
+    if leveler == 'K' : 
+        Kindergarten_input = input("Please input word for Kindergarten leveling: ") 
+        if Kindergarten_input in kindergarten_set :
+            print('This word is appropriate for a Kindergarten reading audience!')
+        else :
+            print("I am sorry, this word is not appropriate for a Kindergarten reading audience.")
+    elif leveler == 'G1' :
+        Grade1_input = input("Please input word for Grade 1 leveling: ") 
+        if Grade1_input in grade1_set :
+            print ('This word is appropriate for a Grade 1 reading audience!')
+        else :
+            print ('I am sorry, this word is not appropriate for a Grade 1 reading audience.')
+    if input('Do you want to repeat? (y/n) ') == 'n':
+        break
